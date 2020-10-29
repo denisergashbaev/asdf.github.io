@@ -6,8 +6,40 @@
 ignoring some rules with flake8 linter:
 <https://stackoverflow.com/questions/50177173/how-do-i-get-flake8-to-reliably-ignore-rules-in-vs-code>
 
-## VSC hotkeys
+Pointing at source folders in VSC
+based on: <https://binx.io/blog/2020/03/05/setting-python-source-folders-vscode/>
 
-Ctrl+D: select word
+Adjust contents of `.vscode/settings.json` (or create new if does not exist): 
 
-Ctrl+Shift+K: delete line
+```json
+{
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/SOURCE_FOLDER_NAME",
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/SOURCE_FOLDER_NAME",
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/SOURCE_FOLDER_NAME",
+    }
+}
+```
+
+and change contents of `.env` in root folder of the project (create one if does not exist):
+
+```bash
+PYTHONPATH=${PYTHONPATH}:./SOURCE_FOLDER_NAME
+```
+
+## Extensions
+
+Pylance language server for Python in VS Code.
+Supposedly better features (like code completion): <https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance>
+
+## VSC hotkeys (German keyboard)
+
+select word: `Ctrl+D`
+
+delete line: `Ctrl+Shift+K`
+
+open quick fix menu: `Ctrl+.`

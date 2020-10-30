@@ -21,14 +21,13 @@ Adjust contents of `.vscode/settings.json` (or create new if does not exist):
     },
     "terminal.integrated.env.windows": {
         "PYTHONPATH": "${workspaceFolder}/SOURCE_FOLDER_NAME",
-    }
+    },
+    "python.envFile": "${workspaceFolder}/.env"
 }
 ```
-
-and change contents of `.env` in root folder of the project (create one if does not exist):
-
+and contents of `.env` in root folder of the project (create one if does not exist): 
 ```bash
-PYTHONPATH=${PYTHONPATH}:./SOURCE_FOLDER_NAME
+PYTHONPATH=${PYTHONPATH}:./SelfPlay
 ```
 
 ## Extensions
@@ -43,3 +42,5 @@ select word: `Ctrl+D`
 delete line: `Ctrl+Shift+K`
 
 open quick fix menu: `Ctrl+.`
+
+delete a line: `SHIFT + del`

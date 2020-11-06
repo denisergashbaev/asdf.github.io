@@ -35,6 +35,15 @@ PYTHONPATH=${PYTHONPATH}:./SelfPlay
 Pylance language server for Python in VS Code.
 Supposedly better features (like code completion): <https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance>
 
+Enable Pylance in `settings.json`:
+
+```json
+{
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "strict",
+}
+```
+
 ## VSC hotkeys (German keyboard)
 
 select word: `Ctrl+D`
@@ -44,3 +53,5 @@ delete line: `Ctrl+Shift+K`
 open quick fix menu: `Ctrl+.`
 
 delete a line: `SHIFT + del`
+
+open type (symbol): `Ctrl+T` 
